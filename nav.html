@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+	<title>Навигация</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<main class="content">
+			<section class="navigation">
+				<div class="container">
+					<div class="navigation__inner">
+						<ul class="navigation__list">
+							<li><a href="index.html">Главная</a></li>
+							<li>
+								<button class="navigation__btn btn btn-green" data-modal="contactModal">
+									<span>Модалка</span>
+								</button>
+							</li>
+							<li>
+								<button class="navigation__btn btn btn-green" data-modal="contactModal2">
+									<span>Модалка 2</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div class="modal" id="contactModal">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close btn btn-animation btn-pink" data-bs-dismiss="modal"
+				aria-label="Close">
+				<img src="img/close.svg" alt="">
+			</button>
+			<div class="modal__content">
+				<h2 class="modal__title h2">Оставить заявку</h2>
+				<form class="form">
+					<div class="form-group">
+						<input type="text" placeholder="Ваше имя">
+					</div>
+					<div class="form-group">
+						<input type="text" placeholder="Номер телефона">
+					</div>
+					<button class="form__btn btn btn-orange">
+						<span>Оставить заявку</span>
+					</button>
+					<div class="form__check">
+						<input type="checkbox">
+						<label>Принимаю <a href="">условия обработки персональных данных</a></label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal2" id="contactModal2">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<h2 class="modal__title h2">Спасибо за заявку</h2>
+				<div class="modal__img">
+					<img src="img/modal-img.webp" alt="">
+				</div>
+				<div class="modal__text h2">Наш менеджер скоро с Вами свяжется</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
+
+<style>
+	.navigation {
+		padding: 50px 0;
+	}
+
+	.navigation__list {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 24px;
+	}
+
+	.navigation__list li a {
+		font-size: 24px;
+		line-height: 120%;
+	}
+
+	.navigation__btn {
+		height: 60px;
+		padding: 5px 25px;
+	}
+
+	.navigation__btn span {
+		font-size: 18px;
+	}
+</style>
